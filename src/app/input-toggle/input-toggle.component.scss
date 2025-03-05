@@ -1,0 +1,82 @@
+// Magenta/Violet Material Theme Colors
+$primary-color: #673AB7; // Deep Purple
+$accent-color: #E91E63;  // Pink
+$background-color: #f3e5f5; // Light purple background
+$text-color: #311B92; // Dark Purple
+$warning-color: #FF4081; // Light Pink Warning
+
+.container {
+  margin: 20px auto;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+// Material form field styling
+.mat-field {
+  width: 100%;
+  margin-bottom: 20px;
+  background: $background-color;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Style the input fields
+input[matInput] {
+  font-size: 16px;
+  color: $text-color;
+}
+
+// Icon and Hint Styling
+mat-icon {
+  color: $primary-color;
+}
+
+.mat-hint {
+  display: flex;
+  align-items: center;
+  color: $warning-color;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+// Custom info icon styling
+.info-icon {
+  font-size: 14px;
+  font-weight: bold;
+  color: $warning-color;
+}
+
+// Responsive adjustments
+@media (max-width: 480px) {
+  .container {
+    max-width: 90%;
+  }
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .info-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  
+  .info-icon {
+    color: #E91E63; // Pink Accent
+    font-size: 24px;
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,40 @@
+<div class="container">
+    <!-- Date Picker -->
+    <mat-form-field appearance="outline" class="mat-field">
+      <mat-label>Select a Date</mat-label>
+      <input
+        matInput
+        [matDatepicker]="picker"
+        [disabled]="textValue !== null"
+        [min]="minDate"
+        (dateChange)="onDateChange($event.value)"
+      />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      
+      
+    </mat-form-field>
+    
+  </div>
+  
+  <div class="container">
+    <!-- Text Input -->
+    <mat-form-field appearance="outline" class="mat-field">
+      <mat-label>Enter Text</mat-label>
+      <input
+        matInput
+        type="text"
+        [disabled]="dateValue !== null"
+        (input)="onTextChange($event)"
+        maxlength="30"
+      />
+     
+      <mat-hint *ngIf="textValue !== null && textValue.length >= 30" class="error">
+        ⚠️ Maximum 30 characters allowed!
+      </mat-hint>
+      
+    </mat-form-field>
+
+    
+  </div>
+  
